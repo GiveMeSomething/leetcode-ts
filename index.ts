@@ -19,5 +19,6 @@ import { main_66 } from "./solutions/66";
 import { main_70 } from "./solutions/70";
 import { main_80 } from "./solutions/80";
 import { main_88 } from "./solutions/88";
+import { main_896 } from "./solutions/896";
 
-main_1502();
+main_896();
