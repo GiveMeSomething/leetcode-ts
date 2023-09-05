@@ -1,37 +1,52 @@
+// function deleteAndEarn(nums: number[]): number {
+//     nums.sort((a, b) => a - b);
+
+//     let max = 0;
+//     const maxPoint = Array(nums.length);
+//     maxPoint[0] = nums[0];
+
+//     for (let i = 1; i < nums.length; i++) {
+//         let previous = 0;
+//         for (let j = i - 1; j >= 0; j--) {
+//             if (nums[j] === nums[i] - 1 || nums[j] === nums[i] + 1) {
+//                 continue;
+//             }
+
+//             if (nums[j] === nums[i]) {
+//                 previous += nums[i];
+//                 continue;
+//             }
+
+//             previous += maxPoint[j];
+//             break;
+//         }
+
+//         if (previous > 0) {
+//             max = Math.max(max, previous + nums[i]);
+//         } else {
+//             max = Math.max(max, nums[i]);
+//         }
+
+//         maxPoint[i] = max;
+//         console.log(maxPoint);
+//     }
+
+//     return maxPoint[nums.length - 1];
+// }
+
 function deleteAndEarn(nums: number[]): number {
-    nums.sort((a, b) => a - b);
+    const n = Math.max(...nums) + 1;
+    const buckets: number[] = Array(n).fill(0);
 
-    let max = 0;
-    const maxPoint = Array(nums.length);
-    maxPoint[0] = nums[0];
-
-    for (let i = 1; i < nums.length; i++) {
-        let previous = 0;
-        for (let j = i - 1; j >= 0; j--) {
-            if (nums[j] === nums[i] - 1 || nums[j] === nums[i] + 1) {
-                continue;
-            }
-
-            if (nums[j] === nums[i]) {
-                previous += nums[i];
-                continue;
-            }
-
-            previous += maxPoint[j];
-            break;
-        }
-
-        if (previous > 0) {
-            max = Math.max(max, previous + nums[i]);
-        } else {
-            max = Math.max(max, nums[i]);
-        }
-
-        maxPoint[i] = max;
-        console.log(maxPoint);
+    for (let val of nums) {
+        buckets[val] += val;
     }
 
-    return maxPoint[nums.length - 1];
+    for (let i = 2; i < n; i++) {
+        buckets[i] = Math.max(buckets[i - 1], buckets[i - 2] + buckets[i]);
+    }
+
+    return Math.max(buckets[n - 1], buckets[n - 2]);
 }
 
 export const main_740 = () => {
