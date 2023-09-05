@@ -2,6 +2,7 @@ import { main_121 } from "./solutions/121";
 import { main_122 } from "./solutions/122";
 import { main_169 } from "./solutions/169";
 import { main_1768 } from "./solutions/1768";
+import { main_1822 } from "./solutions/1822";
 import { main_189 } from "./solutions/189";
 import { main_242 } from "./solutions/242";
 import { main_26 } from "./solutions/26";
@@ -18,4 +19,4 @@ import { main_70 } from "./solutions/70";
 import { main_80 } from "./solutions/80";
 import { main_88 } from "./solutions/88";
 
-main_66();
+main_1822();
