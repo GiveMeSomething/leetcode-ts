@@ -16,10 +16,11 @@ import { main_389 } from "./solutions/389";
 import { main_45 } from "./solutions/45";
 import { main_459 } from "./solutions/459";
 import { main_55 } from "./solutions/55";
+import { main_58 } from "./solutions/58";
 import { main_66 } from "./solutions/66";
 import { main_70 } from "./solutions/70";
 import { main_80 } from "./solutions/80";
 import { main_88 } from "./solutions/88";
 import { main_896 } from "./solutions/896";
 
-main_13();
+main_58();
