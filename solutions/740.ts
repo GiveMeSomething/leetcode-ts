@@ -1,3 +1,9 @@
+// Way 1: Sort the number array first
+// From here we can calculate current max from the last result
+// 1. If there are no previous value (previous = 0) => update current max = Math.max(max, current)
+// 2. There are previous value => update current max = Math.max(max, previous + current)
+//
+// Notes: For adjacent duplicate number, we need to include them into previous value
 // function deleteAndEarn(nums: number[]): number {
 //     nums.sort((a, b) => a - b);
 
@@ -34,6 +40,9 @@
 //     return maxPoint[nums.length - 1];
 // }
 
+// Way 2: Turn the original problem into robber problem
+// Turn original number array to a new array (new)
+// new's index is the nums[i] and new[index] = sum(nums[i]) (sum of all occurance of nums[i])
 function deleteAndEarn(nums: number[]): number {
     const n = Math.max(...nums) + 1;
     const buckets: number[] = Array(n).fill(0);
