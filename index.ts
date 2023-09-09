@@ -29,10 +29,11 @@ import { main_66 } from "./solutions/66";
 import { main_682 } from "./solutions/682";
 import { main_70 } from "./solutions/70";
 import { main_709 } from "./solutions/709";
+import { main_73 } from "./solutions/73";
 import { main_740 } from "./solutions/740";
 import { main_746 } from "./solutions/746";
 import { main_80 } from "./solutions/80";
 import { main_88 } from "./solutions/88";
 import { main_896 } from "./solutions/896";
 
-main_54();
+main_73();
