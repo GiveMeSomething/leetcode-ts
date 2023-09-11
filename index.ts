@@ -20,6 +20,7 @@ import { main_28 } from "./solutions/28";
 import { main_283 } from "./solutions/283";
 import { main_389 } from "./solutions/389";
 import { main_4 } from "./solutions/4";
+import { main_43 } from "./solutions/43";
 import { main_45 } from "./solutions/45";
 import { main_459 } from "./solutions/459";
 import { main_509 } from "./solutions/509";
@@ -38,4 +39,4 @@ import { main_80 } from "./solutions/80";
 import { main_88 } from "./solutions/88";
 import { main_896 } from "./solutions/896";
 
-main_1282();
+main_43();
