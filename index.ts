@@ -42,6 +42,7 @@ import { main_66 } from "./solutions/66";
 import { main_682 } from "./solutions/682";
 import { main_70 } from "./solutions/70";
 import { main_709 } from "./solutions/709";
+import { main_712 } from "./solutions/712";
 import { main_72 } from "./solutions/72";
 import { main_73 } from "./solutions/73";
 import { main_740 } from "./solutions/740";
@@ -51,4 +52,4 @@ import { main_88 } from "./solutions/88";
 import { main_896 } from "./solutions/896";
 import { main_931 } from "./solutions/931";
 
-main_72();
+main_712();
