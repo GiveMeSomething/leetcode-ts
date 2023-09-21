@@ -51,13 +51,47 @@
 //     return max;
 // }
 
+function longestPalindrome(s: string): string {
+    let max: number[] = [0, 0];
+    let upperBound = s.length - 1;
+    for (let i = 0; i < s.length; i++) {
+        let low = i - 1;
+        let high = i + 1;
+
+        while (low >= 0 && s[low] === s[i]) {
+            low--;
+        }
+
+        while (high <= upperBound && s[high] === s[i]) {
+            high++;
+        }
+
+        while (low >= 0 && high <= upperBound && s[low] === s[high]) {
+            low--;
+            high++;
+        }
+
+        if (high - low > max[1] - max[0]) {
+            max = [low, high];
+        }
+    }
+
+    // low always end at [trueLow - 1], high always end at at [trueHigh + 1]
+    // (because it need to test s[low - 1] !== s[high + 1])
+    // String.slice() exclusive the end so it doesn't need max[1] - 1
+    return s.slice(max[0] + 1, max[1]);
+}
+
 export const main_5 = () => {
     // const s = "babad";
     // const s = "cbbd";
-    const s = "bbbb";
+    // const s = "bbbb";
     // const s = "ac";
     // const s = "bb";
 
-    const result = longestPalindrome(s);
-    console.log(result);
+    const tests = ["babad", "cbbd", "bbbb", "ac", "bb", "b"];
+    for (let s of tests) {
+        const result = longestPalindrome(s);
+        console.log(result);
+    }
 };
