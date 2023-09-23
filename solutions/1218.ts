@@ -16,6 +16,28 @@
 //     return Math.max(...memo);
 // }
 
+function longestSubsequence(arr: number[], difference: number): number {
+    const valueMap = new Map<number, number>();
+
+    for (let i = 0; i < arr.length; i++) {
+        const prevValue = arr[i] - difference;
+        const prevCount = valueMap.get(prevValue);
+        if (prevCount == null) {
+            valueMap.set(arr[i], 1);
+            continue;
+        }
+
+        valueMap.set(arr[i], prevCount + 1);
+    }
+
+    let max = 0;
+    for (let count of valueMap.values()) {
+        max = Math.max(max, count);
+    }
+
+    return max;
+}
+
 export const main_1218 = () => {
     // const arr = [1, 2, 3, 4];
     // const arr = [1, 3, 5, 7];
