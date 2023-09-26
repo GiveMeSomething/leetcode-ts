@@ -1,4 +1,5 @@
 import { main_1027 } from "./solutions/1027";
+import { main_1035 } from "./solutions/1035";
 import { main_1041 } from "./solutions/1041";
 import { main_1081 } from "./solutions/1081";
 import { main_1137 } from "./solutions/1137";
@@ -59,4 +60,4 @@ import { main_88 } from "./solutions/88";
 import { main_896 } from "./solutions/896";
 import { main_931 } from "./solutions/931";
 
-main_1081();
+main_1035();
